@@ -1,0 +1,18 @@
+﻿body {
+    background-color: black;
+}
+
+.text-area {
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    font-family: 'Comic Sans MS';
+    font-size: 50px;
+}
+
+.ask-button {
+    position: absolute;
+    float: left;
+    top: 75%;
+    left: 60%;
+}
