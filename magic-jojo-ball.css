@@ -3,28 +3,50 @@
     /*display: table;*/
 }
 
-#fortune-teller-image-id {
-    /*align-items: stretch;*/
-    -webkit-transform: scale(1.8) rotate(0.01deg);
-    transform: scale(1, 1) rotate(0.01deg);
-    height: 500%;
-    width: auto;
-}
-
-.text-area {
-    /*position: absolute;*/
-    top: 70%;
-    /*//    transform: translateY(-50%);*/
-    left: 40%;
+#question-area-id {
+    border-radius: 1em;
+    padding: 1px;
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
     font-family: 'Comic Sans MS';
-    font-size: 50px;
-    -webkit-transform: scale(1.8) rotate(0.01deg);
-    transform: scale(1, 1) rotate(0.01deg);
+    font-size: 24px;
+    height: 10%;
+    resize: none;
+    text-align: center;
+    text-align-last: center;
 }
 
-.ask-button {
-    position: sticky;
-    top: 75%;
-    left: 60%;
-    
+#ask-button-id {
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 73%;
+    left: 65%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+
+
+#fortune-teller-image-id {
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#meme-area-id {
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
