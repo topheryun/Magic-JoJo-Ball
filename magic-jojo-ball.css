@@ -3,6 +3,20 @@
     /*display: table;*/
 }
 
+@keyframes slide-right {
+    0% {left: 50%; }
+}
+
+@keyframes slide-left {
+    0% {right: 50%; }
+}
+
+.main-image-transition {
+    animation-name: slide-right;
+    transition: 3s; 
+    margin-left: 50% !important;
+}
+
 #question-area-id {
     border-radius: 1em;
     padding: 1px;
@@ -19,6 +33,8 @@
     text-align-last: center;
 }
 
+
+
 #ask-button-id {
     border-radius: 1em;
     padding: 1em;
@@ -31,14 +47,15 @@
 }
 
 
-#fortune-teller-image-id {
+#main-image-id {
     border-radius: 1em;
     padding: 1em;
+    padding-top: 200px;
     position: absolute;
     top: 38%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%) 
 }
 
 #meme-area-id {

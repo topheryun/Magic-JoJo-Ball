@@ -21,7 +21,6 @@ This function activates when the "Ask" button is pressed.
 It chooses a random meme answer and displays it.
 ================================================== */
 function loadMemeAnswer() {
-	
 	var randomNumber = Math.floor(Math.random() * 3) + 1;
 	var img = new Image();
 	img.src = "yes0" + randomNumber + ".gif";
@@ -31,9 +30,11 @@ function loadMemeAnswer() {
 		// document.getElementById('meme-area').style.opacity = 1;
 	}
 	*/
-
-	document.getElementById("testgif").src = img.src;
-
+    var val = document.getElementById("main-id-image").att
+ 
+    console.log(val);
+    document.getElementById("meme-area-id").src = img.src;
+    
 }
 
 
