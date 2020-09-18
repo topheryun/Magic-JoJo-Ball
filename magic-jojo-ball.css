@@ -1,18 +1,30 @@
 ﻿body {
     background-color: black;
+    /*display: table;*/
+}
+
+#fortune-teller-image-id {
+    /*align-items: stretch;*/
+    -webkit-transform: scale(1.8) rotate(0.01deg);
+    transform: scale(1, 1) rotate(0.01deg);
+    height: 500%;
+    width: auto;
 }
 
 .text-area {
-    position: absolute;
+    /*position: absolute;*/
     top: 70%;
+    /*//    transform: translateY(-50%);*/
     left: 40%;
     font-family: 'Comic Sans MS';
     font-size: 50px;
+    -webkit-transform: scale(1.8) rotate(0.01deg);
+    transform: scale(1, 1) rotate(0.01deg);
 }
 
 .ask-button {
-    position: absolute;
-    float: left;
+    position: sticky;
     top: 75%;
     left: 60%;
+    
 }
