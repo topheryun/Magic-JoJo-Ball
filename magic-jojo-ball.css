@@ -1,4 +1,4 @@
-﻿body {
+﻿﻿body {
     background-color: black;
     /*display: table;*/
 }
@@ -11,13 +11,19 @@
     0% {right: 50%; }
 }
 
-.main-image-transition {
+.main-image-transition-right {
     animation-name: slide-right;
-    transition: 3s; 
-    margin-left: 50% !important;
+    transition: 1s; 
+    margin-left: 10% !important;
 }
 
-#question-area-id {
+.main-image-transition-left {
+    animation-name: slide-left;
+    transition: 1s; 
+    margin-right: 10% !important;
+}
+
+.question-area {
     border-radius: 1em;
     padding: 1px;
     position: absolute;
@@ -35,7 +41,7 @@
 
 
 
-#ask-button-id {
+.ask-button {
     border-radius: 1em;
     padding: 1em;
     position: absolute;
@@ -47,7 +53,7 @@
 }
 
 
-#main-image-id {
+.main-image {
     border-radius: 1em;
     padding: 1em;
     padding-top: 200px;
@@ -58,7 +64,7 @@
     transform: translate(-50%, -50%) 
 }
 
-#meme-area-id {
+.meme-area {
     border-radius: 1em;
     padding: 1em;
     position: absolute;

@@ -47,19 +47,19 @@ function toggleButtonClass() {
 
 function toggleAbdulClass() {
 	if (isMemeShowing) {
-		document.getElementById("abdul-id").classList.toggle("firstClass"); // change id and class
+		document.getElementById("main-image-id").classList.toggle("firstClass"); // change id and class
 	}
 	else {
-		document.getElementById("abdul-id").classList.toggle("secondClass");
+		document.getElementById("main-image-id").classList.toggle("secondClass");
 	}
 }
 
 function toggleTextFieldClass() {
 	if (isMemeShowing) {
-		document.getElementById("text-id").classList.toggle("firstClass"); // change id and class
+		document.getElementById("question-area-id").classList.toggle("firstClass"); // change id and class
 	}
 	else {
-		document.getElementById("text-id").classList.toggle("secondClass");
+		document.getElementById("question-area-id").classList.toggle("secondClass");
 	}
 }
 
