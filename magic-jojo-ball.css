@@ -1,7 +1,7 @@
-﻿﻿body {
-    background-color: black;
-    /*display: table;*/
+﻿body {
+    background-color: mediumpurple;
 }
+
 
 @keyframes slide-right {
     0% {left: 50%; }
@@ -14,13 +14,14 @@
 .main-image-transition-right {
     animation-name: slide-right;
     transition: 1s; 
-    margin-left: 10% !important;
+    margin-left: 38%;
+    position: absolute;
 }
 
 .main-image-transition-left {
     animation-name: slide-left;
     transition: 1s; 
-    margin-right: 10% !important;
+    margin-right: 30%;
 }
 
 .question-area {
@@ -53,6 +54,17 @@
 }
 
 
+.retry-button {
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 73%;
+    left: 65%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+
 .main-image {
     border-radius: 1em;
     padding: 1em;
@@ -64,6 +76,7 @@
     transform: translate(-50%, -50%) 
 }
 
+
 .meme-area {
     border-radius: 1em;
     padding: 1em;
@@ -72,4 +85,8 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
+}
+
+.question-area-incognito {
+    display: none;
 }
