@@ -58,11 +58,13 @@
     border-radius: 1em;
     padding: 1em;
     position: absolute;
-    top: 73%;
-    left: 65%;
+    top: 93%;
+    left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
+    transform: translate(-50%, -50%);   
+    resize: none;
+    text-align: center;
+    text-align-last: center;
 }
 
 .main-image {

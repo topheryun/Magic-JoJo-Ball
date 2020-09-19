@@ -45,21 +45,22 @@ var memeAnswers = [
 
 function toggleButtonClass() {
 	if (isMemeShowing) {
-		document.getElementById("ask-button-id").classList.toggle("main-image-transition-right");
+		document.getElementById("ask-button-id").classList.toggle("retry-button");
 		document.getElementById("ask-button-id").innerHTML = "Ask";
 	}
 	else {
-		document.getElementById("ask-button-id").classList.toggle("main-image-transition-right");
+		document.getElementById("ask-button-id").classList.toggle("retry-button");
 		document.getElementById("ask-button-id").innerHTML = "Ask Again";
 	}
 }
 
 function toggleAbdulClass() {
 	if (isMemeShowing) {
-		document.getElementById("main-image-id").classList.toggle("firstClass");
+        document.getElementById("main-image-id").classList.toggle("main-image-transition-right");
+        //document.getElementById("main-image-id").src = "/Unit_Muhammad_Avdol_(Swirling_flame).png"; Change abdul's image to that
 	}
 	else {
-		document.getElementById("main-image-id").classList.toggle("secondClass");
+        document.getElementById("main-image-id").classList.toggle("main-image-transition-right");
 	}
 }
 
