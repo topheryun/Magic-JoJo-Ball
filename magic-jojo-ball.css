@@ -1,10 +1,12 @@
 ﻿body {
-    background-color: mediumpurple;
+    background-color: #212121;
+    margin: 0px
 }
 
 
 @keyframes slide-right {
     0% {left: 50%; }
+
 }
 
 @keyframes slide-left {
@@ -24,21 +26,38 @@
     margin-right: 30%;
 }
 
+.main-image {
+    /*border-radius: 1em;*/
+    /*padding: 1em;*/
+    position: absolute;
+    top: 10px;
+    left: 580px;   
+}
+
 .question-area {
     border-radius: 1em;
-    padding: 1px;
     position: absolute;
-    top: 72%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Comic Sans MS';
-    font-size: 24px;
-    height: 10%;
+    top: 700px;
+    left: 790px;
+    /*margin-right: -50%;*/
+    background: rgba(255,255,255,0.8);
+    height: 80px;
+    width: 350px;
+
     resize: none;
     text-align: center;
     text-align-last: center;
+    vertical-align: middle;
+    font-family: 'Comic Sans MS';
+    font-size: 24px;
+   
 }
+
+
+.question-area-incognito {
+    display: none;
+}
+
 
 
 
@@ -46,11 +65,10 @@
     border-radius: 1em;
     padding: 1em;
     position: absolute;
-    top: 73%;
-    left: 65%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    top: 690px;
+    left: 1150px;
     font-size: 30px;
+    background: rgba(255,255,255,0.8);
 }
 
 
@@ -58,24 +76,11 @@
     border-radius: 1em;
     padding: 1em;
     position: absolute;
-    top: 93%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);   
-    resize: none;
+    top: 740px;
+    left: 890px;
     text-align: center;
     text-align-last: center;
-}
-
-.main-image {
-    border-radius: 1em;
-    padding: 1em;
-    padding-top: 200px;
-    position: absolute;
-    top: 38%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) 
+    font-size: 20px;
 }
 
 
@@ -89,6 +94,15 @@
     transform: translate(-50%, -50%)
 }
 
-.question-area-incognito {
-    display: none;
+
+
+.background {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    background-image: url(images/background.png);
+    
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
 }
