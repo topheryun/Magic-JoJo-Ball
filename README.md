@@ -13,4 +13,5 @@ Both of us are pretty new to the world of web design, so we didn't know if the s
 
 Overall the experience was great! I think we both learned a ton about web development. The only thing I will do differently next time is be more ambitious with the project. I think if we really exerted ourselves, we could have come out with a better product. However, since it was our first web site, I'm pretty proud of what we're accomplished.
 
+The project is best enjoyed in a maximized or fullscreen window, and was tested mostly on Firefox and Chrome.
 You can find admire this project in action here: https://magic-jojo-ball.s3-us-west-1.amazonaws.com/magic-jojo-ball.html
