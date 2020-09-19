@@ -2,12 +2,19 @@ var isMemeShowing = false;
 
 window.onload=function() {
 	
+/* ==================================================
+Stuff that happens when the button is pressed.
+================================================== */
 	document.getElementById('ask-button-id').addEventListener('click', function() {
+		
 		loadMemeAnswer();
 		toggleButtonClass();
 		toggleAbdulClass();
 		toggleTextFieldClass();
 		toggleMeme();
+		
+		var textArea = document.querySelector('#question-area-id');
+		textArea.value = "";
 		
 		if(isMemeShowing) {
 			isMemeShowing = false;
@@ -38,16 +45,18 @@ var memeAnswers = [
 
 function toggleButtonClass() {
 	if (isMemeShowing) {
-		document.getElementById("ask-button-id").classList.toggle("main-image-transition-right"); // change id and class
+		document.getElementById("ask-button-id").classList.toggle("main-image-transition-right");
+		document.getElementById("ask-button-id").innerHTML = "Ask";
 	}
 	else {
 		document.getElementById("ask-button-id").classList.toggle("main-image-transition-right");
+		document.getElementById("ask-button-id").innerHTML = "Ask Again";
 	}
 }
 
 function toggleAbdulClass() {
 	if (isMemeShowing) {
-		document.getElementById("main-image-id").classList.toggle("firstClass"); // change id and class
+		document.getElementById("main-image-id").classList.toggle("firstClass");
 	}
 	else {
 		document.getElementById("main-image-id").classList.toggle("secondClass");
@@ -56,10 +65,10 @@ function toggleAbdulClass() {
 
 function toggleTextFieldClass() {
 	if (isMemeShowing) {
-		document.getElementById("question-area-id").classList.toggle("firstClass"); // change id and class
+		document.getElementById("question-area-id").classList.toggle("question-area-incognito");
 	}
 	else {
-		document.getElementById("question-area-id").classList.toggle("secondClass");
+		document.getElementById("question-area-id").classList.toggle("question-area-incognito");
 	}
 }
 
@@ -107,6 +116,3 @@ function getImageSourceString() {
 
 
 
-/* ==================================================
-
-================================================== */
