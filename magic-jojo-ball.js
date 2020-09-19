@@ -7,7 +7,8 @@ Stuff that happens when the button is pressed.
 ================================================== */
 	document.getElementById('ask-button-id').addEventListener('click', function() {
 		
-		loadMemeAnswer();
+        loadMemeAnswer();
+        toggleHeaderClass();
 		toggleButtonClass();
 		toggleAbdulClass();
 		toggleMeme();
@@ -23,6 +24,17 @@ Stuff that happens when the button is pressed.
 	});
 }
 
+function toggleHeaderClass() {
+
+    if (isMemeShowing) { 
+        document.getElementById("you-asked-id").classList.toggle("you-asked");
+    } else {
+        document.getElementById("you-asked-id").innerHTML = "You asked: ";
+        document.getElementById("you-asked-id").classList.toggle("you-asked");
+    }
+}
+
+
 function toggleUserInput() {
 	var userInput = document.getElementById("question-area-id").value;
 	
@@ -30,14 +42,15 @@ function toggleUserInput() {
 		document.getElementById("question-title-id").innerHTML = "";
 	}
 	else {
-		document.getElementById("question-title-id").innerHTML = "You asked: " + userInput;
+		document.getElementById("question-title-id").innerHTML = userInput;
 	}
 }
 
 function toggleButtonClass() {
 	if (isMemeShowing) {
 		document.getElementById("ask-button-id").classList.toggle("retry-button");
-		document.getElementById("ask-button-id").innerHTML = "Ask";
+        document.getElementById("ask-button-id").innerHTML = "Ask";
+
 	}
 	else {
 		document.getElementById("ask-button-id").classList.toggle("retry-button");
@@ -46,10 +59,12 @@ function toggleButtonClass() {
 }
 
 function toggleAbdulClass() {
-	if (isMemeShowing) {
+    if (isMemeShowing) {
+        document.getElementById("main-image-id").src = "images/abdul-text-box.png";
         document.getElementById("main-image-id").classList.toggle("main-image-transition-right");
 	}
-	else {
+    else {
+        document.getElementById("main-image-id").src = "images/Unit_Muhammad_Avdol_(Swirling_flame).png";
         document.getElementById("main-image-id").classList.toggle("main-image-transition-right");
 	}
 }
