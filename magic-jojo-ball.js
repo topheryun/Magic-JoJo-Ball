@@ -10,11 +10,9 @@ Stuff that happens when the button is pressed.
 		loadMemeAnswer();
 		toggleButtonClass();
 		toggleAbdulClass();
-		toggleTextFieldClass();
 		toggleMeme();
-		
-		var textArea = document.querySelector('#question-area-id');
-		textArea.value = "";
+		toggleUserInput();
+		toggleTextFieldClass();
 		
 		if(isMemeShowing) {
 			isMemeShowing = false;
@@ -22,26 +20,19 @@ Stuff that happens when the button is pressed.
 		else {
 			isMemeShowing = true;
 		}
-		
 	});
 }
 
-/* ==================================================
-Array of gifs. Might not need this. Marc says it might
-have a use later
-================================================== */
-var memeAnswers = [
-	"yes01.gif",
-	"yes02.gif",
-	"yes03.gif",
-	"no01.gif",
-	"no02.gif",
-	"no03.gif",
-	"maybe01.gif",
-	"maybe02.gif",
-	"maybe03.gif",
-	"maybe04.gif"
-];
+function toggleUserInput() {
+	var userInput = document.getElementById("question-area-id").value;
+	
+	if (isMemeShowing) {
+		document.getElementById("question-title-id").innerHTML = "";
+	}
+	else {
+		document.getElementById("question-title-id").innerHTML = "You asked: " + userInput;
+	}
+}
 
 function toggleButtonClass() {
 	if (isMemeShowing) {
@@ -57,7 +48,6 @@ function toggleButtonClass() {
 function toggleAbdulClass() {
 	if (isMemeShowing) {
         document.getElementById("main-image-id").classList.toggle("main-image-transition-right");
-        //document.getElementById("main-image-id").src = "/Unit_Muhammad_Avdol_(Swirling_flame).png"; Change abdul's image to that
 	}
 	else {
         document.getElementById("main-image-id").classList.toggle("main-image-transition-right");
@@ -65,6 +55,9 @@ function toggleAbdulClass() {
 }
 
 function toggleTextFieldClass() {
+	var textArea = document.querySelector('#question-area-id');
+	textArea.value = "";
+	
 	if (isMemeShowing) {
 		document.getElementById("question-area-id").classList.toggle("question-area-incognito");
 	}
@@ -79,7 +72,6 @@ function toggleMeme() {
 	}
 }
 
-
 /* ==================================================
 This function activates when the "Ask" button is pressed.
 It chooses a random meme answer and displays it.
@@ -88,9 +80,6 @@ function loadMemeAnswer() {
 	if (!isMemeShowing) {
 		document.getElementById("meme-area-id").src = ( "images/" + getImageSourceString() );
 	}
-
-	// console.log("meme-area-id");
-	
 }
 
 /* ==================================================
@@ -99,7 +88,6 @@ Retrieve yes/no/maybe gif string with a 2/1/1 ratio
 function getImageSourceString() {
 	// 0-1: yes, 2: no, 3: maybe
 	var answerType = Math.floor(Math.random() * 4);
-	// console.log("random numer: " + answerType);
 	
 	if (answerType <= 1) { // yes
 		var randomNumber = Math.floor(Math.random() * 3) + 1;
@@ -114,6 +102,3 @@ function getImageSourceString() {
 		return "maybe0" + randomNumber + ".gif";
 	}
 }
-
-
-
