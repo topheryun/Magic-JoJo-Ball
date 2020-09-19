@@ -4,10 +4,10 @@ window.onload=function() {
 	
 	document.getElementById('ask-button-id').addEventListener('click', function() {
 		loadMemeAnswer();
-	
 		toggleButtonClass();
 		toggleAbdulClass();
 		toggleTextFieldClass();
+		toggleMeme();
 		
 		if(isMemeShowing) {
 			isMemeShowing = false;
@@ -18,31 +18,6 @@ window.onload=function() {
 		
 	});
 }
-
-
-/*
-window.onload=function() {
-
-document.getElementsByClassName('toggleButton')[0].onclick = function() {
-  if(this.innerHTML === 'Play') 
-  { 
-    this.innerHTML = 'Pause';
-    box.classList.add('horizTranslate');
-  } else {
-    this.innerHTML = 'Play';
-    var computedStyle = window.getComputedStyle(box),
-        marginLeft = computedStyle.getPropertyValue('margin-left');
-    box.style.marginLeft = marginLeft;
-    box.classList.remove('horizTranslate');    
-  }  
-}
-
-}
-
-*/
-
-
- 
 
 /* ==================================================
 Array of gifs. Might not need this. Marc says it might
@@ -63,14 +38,14 @@ var memeAnswers = [
 
 function toggleButtonClass() {
 	if (isMemeShowing) {
-		document.getElementById("ask-button-id").classList.toggle("main-image-id"); // change id and class
+		document.getElementById("ask-button-id").classList.toggle("main-image-transition-right"); // change id and class
 	}
 	else {
-		document.getElementById("ask-button-id").classList.toggle("main-image-transition");
+		document.getElementById("ask-button-id").classList.toggle("main-image-transition-right");
 	}
 }
 
-toggleAbdulClass() {
+function toggleAbdulClass() {
 	if (isMemeShowing) {
 		document.getElementById("abdul-id").classList.toggle("firstClass"); // change id and class
 	}
@@ -79,12 +54,18 @@ toggleAbdulClass() {
 	}
 }
 
-toggleTextFieldClass() {
+function toggleTextFieldClass() {
 	if (isMemeShowing) {
 		document.getElementById("text-id").classList.toggle("firstClass"); // change id and class
 	}
 	else {
 		document.getElementById("text-id").classList.toggle("secondClass");
+	}
+}
+
+function toggleMeme() {
+	if (isMemeShowing) {
+		document.getElementById("meme-area-id").src = "";
 	}
 }
 
@@ -94,8 +75,10 @@ This function activates when the "Ask" button is pressed.
 It chooses a random meme answer and displays it.
 ================================================== */
 function loadMemeAnswer() {
-	
-	document.getElementById("meme-area-id").src = ( "images/" + getImageSourceString() );
+	if (!isMemeShowing) {
+		document.getElementById("meme-area-id").src = ( "images/" + getImageSourceString() );
+	}
+
 	// console.log("meme-area-id");
 	
 }
