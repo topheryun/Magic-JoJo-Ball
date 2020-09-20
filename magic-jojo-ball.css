@@ -174,10 +174,15 @@
     box-shadow: none;
 }
 
+.head{
+	  position: absolute;
+		top: 20px;
+		width: 100%;
+}
+
 .you-asked {
     border-radius: 1em;
     /*padding: 1em;*/
-    
     /*left: 850px;*/
     color: darkorange;
     /*text-align: center;

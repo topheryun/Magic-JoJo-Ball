@@ -27,6 +27,7 @@ Stuff that happens when the button is pressed.
 function toggleHeaderClass() {
 
     if (isMemeShowing) { 
+				document.getElementById("you-asked-id").innerHTML = "";
         document.getElementById("you-asked-id").classList.toggle("you-asked");
     } else {
         document.getElementById("you-asked-id").innerHTML = "You asked: ";
