@@ -6,9 +6,8 @@ window.onload=function() {
 Stuff that happens when the button is pressed.
 ================================================== */
 	document.getElementById('ask-button-id').addEventListener('click', function() {
-		
-        loadMemeAnswer();
-        toggleHeaderClass();
+    loadMemeAnswer();
+    toggleHeaderClass();
 		toggleButtonClass();
 		toggleAbdulClass();
 		toggleMeme();
